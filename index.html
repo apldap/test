@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arakettik — Платформа возможностей</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-rocket logo-icon"></i>
+                <span>Arakettik</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#about" class="nav-link active">О проекте</a>
+                <a href="#events" class="nav-link">Ивенты</a>
+                <a href="#hub" class="nav-link">База знаний</a>
+                <a href="#suggest" class="nav-link">Организаторам</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </nav>
+
+            <div class="header-controls">
+                <button id="themeToggle" class="theme-btn" aria-label="Переключить тему">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="menuToggle" class="menu-btn" aria-label="Открыть меню">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section" id="about">
+        <div class="glow-sphere sphere-1"></div>
+        <div class="glow-sphere sphere-2"></div>
+        
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge">Платформа возможностей для молодежи</span>
+                <h1>Твой старт в крутое будущее вместе с <span class="gradient-text">Arakettik</span></h1>
+                <p>Находи лучшие волонтерские проекты, участвуй в Моделях ООН, побеждай в дебатах, проходи топовые курсы и прокачивай себя каждый день. Все возможности твоего города в одном месте!</p>
+                <div class="hero-btns">
+                    <a href="#events" class="btn btn-primary">Найти ивент</a>
+                    <a href="#hub" class="btn btn-secondary">База знаний</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="glass-card hero-mockup">
+                    <div class="mockup-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="mockup-body">
+                        <i class="fa-solid fa-bolt mockup-icon"></i>
+                        <h3>Бот @arakettik_bot</h3>
+                        <p>Уже запущен в Telegram! Получай мгновенные уведомления о новых событиях прямо в свой смартфон.</p>
+                        <a href="https://t.me/" target="_blank" class="bot-link"><i class="fa-brands fa-telegram"></i> Запустить бота</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section events-section" id="events">
+        <div class="container">
+            <div class="section-header">
+                <h2>Актуальные <span class="gradient-text">Ивенты</span></h2>
+                <p>Выбирай интересные направления и подавай заявки прямо сейчас</p>
+            </div>
+
+            <div class="filter-wrapper glass-card">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="Поиск мероприятий по названию...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="volunteering">Волонтерство</button>
+                    <button class="filter-btn" data-filter="webinars">Вебинары & Тренинги</button>
+                    <button class="filter-btn" data-filter="eco">Экология</button>
+                </div>
+            </div>
+
+            <div class="events-grid" id="eventsGrid">
+                </div>
+        </div>
+    </section>
+
+    <section class="section hub-section" id="hub">
+        <div class="container">
+            <div class="section-header">
+                <h2>Образовательный <span class="gradient-text">Хаб</span></h2>
+                <p>Гайды, статьи и полезные подборки для твоего развития</p>
+            </div>
+
+            <div class="hub-tabs">
+                <button class="hub-tab-btn active" data-tab="mun">Модель ООН</button>
+                <button class="hub-tab-btn" data-tab="debates">Дебаты</button>
+                <button class="hub-tab-btn" data-tab="courses">Курсы & Саморазвитие</button>
+            </div>
+
+            <div class="hub-content" id="hubContent">
+                </div>
+        </div>
+    </section>
+
+    <section class="section suggest-section" id="suggest">
+        <div class="container suggest-container">
+            <div class="suggest-info">
+                <h2>Вы организатор <span class="gradient-text">мероприятия?</span></h2>
+                <p>Создаете крутой проект, собираете эко-акцию, проводите дебатный турнир или вебинар для молодежи? Расскажите об этом тысячам подростков на нашей платформе и в Telegram-боте абсолютно бесплатно!</p>
+                <ul class="benefits-list">
+                    <li><i class="fa-solid fa-check text-green"></i> Быстрая публикация после модерации</li>
+                    <li><i class="fa-solid fa-check text-purple"></i> Огромный охват целевой аудитории</li>
+                    <li><i class="fa-solid fa-check text-blue"></i> Удобная аналитика просмотров в боте</li>
+                </ul>
+            </div>
+
+            <div class="glass-card form-card">
+                <h3>Подать заявку</h3>
+                <form id="suggestForm">
+                    <div class="form-group">
+                        <label for="orgName">Название организации / Имя</label>
+                        <input type="text" id="orgName" required placeholder="Например: Студсовет или Эко-клуб">
+                    </div>
+                    <div class="form-group">
+                        <label for="eventTitle">Название мероприятия</label>
+                        <input type="text" id="eventTitle" required placeholder="Например: Чистый берег 2026">
+                    </div>
+                    <div class="form-group">
+                        <label for="eventCat">Категория</label>
+                        <select id="eventCat" required>
+                            <option value="volunteering">Волонтерство</option>
+                            <option value="webinars">Вебинары & Тренинги</option>
+                            <option value="eco">Экология</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDesc">Краткое описание</label>
+                        <textarea id="eventDesc" rows="4" required placeholder="Опишите суть мероприятия, дату и условия участия..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Отправить на модерацию</button>
+                </form>
+                <div id="formSuccess" class="form-success-msg hidden">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p>Заявка успешно отправлена! Скоро наш менеджер свяжется с вами, и ивент появится на сайте и в боте.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Остались <span class="gradient-text">вопросы?</span></h2>
+                <p>Быстрые ответы на то, что чаще всего интересует пользователей</p>
+            </div>
+
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Как попасть на мероприятие?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Всё просто! Выбирайте понравившийся ивент в нашей ленте, кликайте по кнопке «Подробнее» или переходите по указанной ссылке регистрации. Также вы можете настроить фильтры в нашем Telegram-боте, чтобы получать уведомления только по интересным вам категориям.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Это бесплатно?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, использование платформы Arakettik, поиск возможностей и публикации для организаторов полностью бесплатны. Наша цель — сделать полезные активности доступными для каждого молодого человека.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Как статьи попадают в Базу Знаний?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Материалы готовятся нашей командой экспертов, экспертами из Дебатных лиг и координаторами Моделей ООН. Если у вас есть крутой образовательный материал или статья, которой вы хотите поделиться, свяжитесь с нами через форму для организаторов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-rocket logo-icon"></i>
+                    <span>Arakettik</span>
+                </a>
+                <p>Твой гид в мире возможностей и саморазвития.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://t.me/" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Arakettik. Создано с любовью для молодежи.</p>
+        </div>
+    </footer>
+
+    <div id="articleModal" class="modal hidden">
+        <div class="modal-content glass-card">
+            <button id="modalClose" class="modal-close-btn" aria-label="Закрыть">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modalBody" class="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
